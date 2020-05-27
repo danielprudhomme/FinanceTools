@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="d0788bd6-4dd9-4fcb-999b-7234eaab451e" ChangeDateTime="05/24/2020 09:12:00">
+    <Property Name="ElementName" Value="[dbo].[MarketPrice].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MarketPrice]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AssetId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="857f3842-bd0e-4104-9554-780871c7e20f" ChangeDateTime="05/24/2020 09:16:07">
+    <Property Name="ElementName" Value="[dbo].[Asset].[Code]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Asset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Symbol" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75546db6-cb94-4fec-b255-10d94906b8b4" ChangeDateTime="05/26/2020 12:27:21">
+    <Property Name="ElementName" Value="[dbo].[Asset].[AssetClassId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Asset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AssetClass" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a99dd4d-8167-440d-a7ec-88b824fdaa13" ChangeDateTime="05/26/2020 12:27:24">
+    <Property Name="ElementName" Value="[dbo].[Asset].[AssetClass]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Asset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Class" />
+  </Operation>
+</Operations>
