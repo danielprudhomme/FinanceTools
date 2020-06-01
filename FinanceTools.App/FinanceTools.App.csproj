@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Blazor" Version="19.2.5-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceTools.Core\FinanceTools.Core.csproj" />
+    <ProjectReference Include="..\FinanceTools.DI\FinanceTools.DI.csproj" />
+  </ItemGroup>
+
+</Project>

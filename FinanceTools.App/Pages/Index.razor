@@ -1,0 +1,37 @@
+﻿@page "/"
+
+@inject IMarketPriceService MarketPriceService
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<DxChart Data="@marketPrices">
+    <DxChartTitle Text="Market Prices" />
+    <DxChartTooltip>
+        @{
+            var date = (DateTime) @context.Point.Argument;
+        }
+        <div class="p-3">
+            <p class="text-align-center"><b>@context.Point.SeriesName</b></p>
+            <p>@date.ToString("MM/yyyy") : @context.Point.Value €</p>
+        </div>
+    </DxChartTooltip>
+    <DxChartLineSeries Name="CAC 40" Filter="@((MarketPrice mp) => mp.AssetId == cac40Id && mp.Date.Month % 3 == 1)"
+                       ArgumentField="@(mp => mp.Date)" ValueField="@(mp => mp.Price)" />
+    <DxChartLegend Position="RelativePosition.Outside" HorizontalAlignment="HorizontalAlignment.Right" />
+</DxChart>
+
+@code {
+    private IEnumerable<MarketPrice> marketPrices;
+
+    private Guid cac40Id = Guid.Parse("C8691BE4-488D-4A18-BA90-5D57E0D1CE2F");
+
+    protected override async Task OnInitializedAsync()
+    {
+        marketPrices = await MarketPriceService.Get(
+            cac40Id,
+            new DateTime(1999, 10, 1),
+            new DateTime(2019, 12, 1));
+    }
+}
