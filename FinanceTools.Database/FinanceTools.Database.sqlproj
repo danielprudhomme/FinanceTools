@@ -67,6 +67,7 @@
     <Build Include="StoredProcedures\InsertAsset.sql" />
     <Build Include="StoredProcedures\EditAsset.sql" />
     <Build Include="StoredProcedures\GetMarketPrices.sql" />
+    <Build Include="StoredProcedures\ResetAllData.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="FinanceTools.Database.refactorlog" />
