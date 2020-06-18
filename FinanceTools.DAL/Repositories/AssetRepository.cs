@@ -16,6 +16,7 @@ namespace FinanceTools.DAL.Repositories
         {
             var queryParameters = new DynamicParameters();
             queryParameters.Add("@Id", asset.Id);
+            queryParameters.Add("@Isin", asset.Isin);
             queryParameters.Add("@Class", asset.Class);
             queryParameters.Add("@Symbol", asset.Symbol);
             queryParameters.Add("@Label", asset.Label);
@@ -28,6 +29,7 @@ namespace FinanceTools.DAL.Repositories
         {
             var queryParameters = new DynamicParameters();
             queryParameters.Add("@Id", asset.Id);
+            queryParameters.Add("@Isin", asset.Isin);
             queryParameters.Add("@Class", asset.Class);
             queryParameters.Add("@Symbol", asset.Symbol);
             queryParameters.Add("@Label", asset.Label);

@@ -4,6 +4,7 @@ namespace FinanceTools.Core.Models
 {
     public class InsertAssetModel
     {
+        public string Isin { get; set; }
         public AssetClass Class { get; set; }
         public string Symbol { get; set; }
         public string Label { get; set; }
